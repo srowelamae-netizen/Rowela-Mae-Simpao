@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eef5ff;
+    color: #26364a;
+    line-height: 1.7;
+}
+
+
+.resume {
+    width: 850px;
+    max-width: 94%;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 10px 35px rgba(0, 70, 150, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.header {
+    background: linear-gradient(
+        135deg,
+        #0756a3,
+        #0d78d4
+    );
+
+    color: white;
+    padding: 45px 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.header::after {
+    content: "";
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    right: -70px;
+    top: -80px;
+}
+
+
+
+.profile-picture {
+    width: 140px;
+    height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid white;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.20);
+
+    position: relative;
+    z-index: 2;
+
+    flex-shrink: 0;
+}
+
+
+/* ==============================
+   HEADER TEXT
+============================== */
+
+.header-text {
+    position: relative;
+    z-index: 2;
+}
+
+.header h1 {
+    font-size: 38px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.course {
+    font-size: 17px;
+    font-weight: 500;
+
+    margin-bottom: 18px;
+}
+
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    font-size: 14px;
+}
+
+
+.section {
+    padding: 28px 50px;
+}
+
+.section + .section {
+    padding-top: 5px;
+}
+
+
+
+.section h2 {
+    color: #0756a3;
+
+    font-size: 22px;
+
+    margin-bottom: 16px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid #d8eaff;
+
+    position: relative;
+}
+
+
+/* Small blue line */
+
+.section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    background: #0d78d4;
+
+    position: absolute;
+
+    bottom: -2px;
+    left: 0;
+}
+
+
+/* Paragraphs */
+
+.section p {
+    font-size: 14.5px;
+
+    color: #4b5d72;
+}
+
+
+.education-item {
+    border-left: 4px solid #0d78d4;
+
+    padding-left: 18px;
+}
+
+.education-item h3 {
+    color: #183b63;
+
+    font-size: 17px;
+
+    margin-bottom: 4px;
+}
+
+.education-item p {
+    margin: 1px 0;
+}
+
+.education-item span {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    color: #0d78d4;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.skills {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+
+.skill-card {
+    background: #f5f9ff;
+
+    border: 1px solid #dcecff;
+
+    border-radius: 8px;
+
+    padding: 17px;
+
+    transition: 0.25s ease;
+}
+
+
+
+.skill-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 18px rgba(13, 120, 212, 0.12);
+
+    border-color: #8fc7f5;
+}
+
+
+.skill-card h3 {
+    color: #0756a3;
+
+    font-size: 15px;
+
+    margin-bottom: 6px;
+}
+
+.skill-card p {
+    font-size: 13px;
+}
+
+
+
+.experience-item {
+    border-left: 3px solid #b9dcfa;
+
+    padding:
+        5px
+        0
+        12px
+        20px;
+
+    margin-bottom: 14px;
+
+    position: relative;
+}
+
+
+.experience-item::before {
+    content: "";
+
+    width: 9px;
+    height: 9px;
+
+    background: #0d78d4;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: -6px;
+    top: 10px;
+}
+
+
+.experience-item h3 {
+    color: #183b63;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    font-size: 14px;
+}
+
+
+footer {
+    background: #f5f9ff;
+
+    border-top: 1px solid #dcecff;
+
+    text-align: center;
+
+    padding: 18px;
+}
+
+footer p {
+    color: #6b7d91;
+
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .resume {
+        width: 95%;
+
+        margin: 20px auto;
+    }
+
+
+
+    .header {
+        padding: 35px 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+
+    .course {
+        font-size: 15px;
+    }
+
+
+  
+
+    .contact {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 5px;
+    }
+
+
+    /* Section spacing */
+
+    .section {
+        padding: 25px;
+    }
+
+
+    /* Skills become one column */
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 450px) {
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .course {
+        font-size: 13px;
+    }
+
+    .profile-picture {
+        width: 105px;
+        height: 105px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+}
+
+
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+
+    .resume {
+        width: 100%;
+
+        max-width: none;
+
+        margin: 0;
+
+        box-shadow: none;
+
+        border-radius: 0;
+    }
+
+
+    .skill-card:hover {
+        transform: none;
+
+        box-shadow: none;
+    }
+
+
+    @page {
+        size: A4;
+
+        margin: 10mm;
+    }
+
+}
